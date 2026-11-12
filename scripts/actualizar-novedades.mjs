@@ -104,6 +104,7 @@ async function resumirConClaude(n) {
 
 const rx = lista => new RegExp('(?:^|[^a-z0-9])(?:' + lista.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') +
   ')(?:e?s)?(?:$|[^a-z0-9])', 'i');
+const recortar = (t, n) => (t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, '') + '…');
 const norm = s => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
 async function leerPrevio() {
@@ -156,7 +157,7 @@ async function main() {
     const imagen = previa?.imagen || url(c.imagen, c.enlace, true) || await ogImagen(c.enlace);
     if (!imagen && cfg.requerirImagen !== false) { descartados.add(c.enlace); continue; }
     nuevas++;
-    const item = { etiqueta: 'Otros', fechaISO: c.fecha.toISOString(), titulo: c.titulo, texto: c.resumen.slice(0, 220),
+    const item = { etiqueta: 'Otros', fechaISO: c.fecha.toISOString(), titulo: c.titulo, texto: recortar(c.resumen, 220),
       imagen, enlace: c.enlace, fuente: c.fuente, traducido: false };
     if (CLAVE) {
       try {
