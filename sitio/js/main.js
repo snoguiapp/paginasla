@@ -191,7 +191,7 @@ $$('.city-photo img, .media img').forEach(img => onBroken(img, () => img.remove(
     <div class="news-body"><span class="news-date">${esc(fecha(d))}${d.fuente ? ' · ' + esc(d.fuente) : ''}</span><h3 class="news-h">${esc(d.titulo)}</h3>
     <p class="news-p">${esc(d.texto)}</p><a class="news-link" href="${esc(seguro(d.enlace))}" target="_blank" rel="noopener noreferrer">${d.fuente ? 'Leer en ' + esc(d.fuente) : 'Ver fuente'}</a></div></article>`).join('');
   dots.innerHTML = data.map((d, i) => `<button type="button" class="news-dot" data-i="${i}" aria-label="Ir a la novedad ${i + 1}"></button>`).join('');
-  if (auto) dots.insertAdjacentHTML('afterend', '<p class="news-note">Resúmenes traducidos automáticamente. Noticias e imágenes pertenecen a sus fuentes.</p>');
+  if (auto) dots.insertAdjacentHTML('afterend', '<p class="news-note">' + (data.some(d => d.traducido) ? 'Resúmenes traducidos automáticamente. ' : '') + 'Noticias e imágenes pertenecen a sus fuentes.</p>');
   $$('.news-media img', box).forEach(img => onBroken(img, () => img.remove()));
   box.hidden = false;
 
