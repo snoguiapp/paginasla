@@ -1,0 +1,34 @@
+name: Actualizar novedades
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # cada 6 horas
+  workflow_dispatch:         # botón "Run workflow" en la pestaña Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: novedades
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Traer y resumir noticias
+        run: node scripts/actualizar-novedades.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Guardar cambios
+        run: |
+          git config user.name "novedades-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add sitio/data/novedades.json
+          git diff --staged --quiet || (git commit -m "Actualizar novedades" && git push)
