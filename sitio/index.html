@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1830">
+  <title>SLA México | Soluciones de comunicaciones y ciberseguridad</title>
+  <meta name="description" content="SLA México: productos, servicios de IT 7x24 a nivel nacional, capacitación, logística, MRO, soporte y financiamiento en tecnologías de la información.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="utility">
+    <div class="wide">
+      <a href="https://app.sladevelop.com/SlaMexicoVentas/Account/Login" target="_blank" rel="noopener noreferrer">Iniciar sesión</a>
+      <a href="tel:+526142590999">(614) 259 09 99</a>
+    </div>
+  </div>
+  <div class="wide nav-bar">
+    <a class="brand" href="index.html" aria-label="SLA México, inicio">
+      <img src="img/logo-sla.png" alt="SLA México" width="150" height="75">
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <div class="has-sub">
+        <a href="#ofrecemos">Qué ofrecemos</a>
+        <div class="sub">
+          <a href="#productos">Productos</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#capacitacion">Capacitación</a>
+          <a href="#logistica">Logística</a>
+          <a href="#mro">MRO</a>
+          <a href="#soporte">Soporte</a>
+        </div>
+      </div>
+      <a href="financiamiento.html">Financiamiento</a>
+      <a href="contacto.html">Contacto</a>
+      <a class="btn btn-small" href="contacto.html">Pedir cotización</a>
+      <a class="menu-login" href="https://app.sladevelop.com/SlaMexicoVentas/Account/Login" target="_blank" rel="noopener noreferrer">Iniciar sesión</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <section class="hero">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wide hero-grid">
+      <div class="hero-content">
+        <h1 aria-label="Soluciones de Comunicaciones y Ciberseguridad">
+          <span class="line pre"><span>Soluciones de</span></span>
+          <span class="line"><span>Comunicaciones</span></span>
+          <span class="line"><span>y Ciberseguridad</span></span>
+        </h1>
+        <p class="hero-text">Equipo, servicio y financiamiento en tecnologías de la información para el desarrollo de tu empresa.</p>
+        <div class="hero-actions">
+          <a class="btn" href="contacto.html">Pedir una cotización</a>
+          <a class="btn btn-ghost" href="#ofrecemos">¿Qué necesitas?</a>
+        </div>
+      </div>
+
+      <!-- Panel de novedades: se llena desde js/novedades.js -->
+      <aside class="news" id="news" aria-roledescription="carrusel" aria-label="Novedades en IT" hidden>
+        <div class="news-head">
+          <h2 class="news-title">Novedades en IT</h2>
+          <div class="news-ctrl">
+            <button type="button" class="news-btn" data-dir="-1" aria-label="Novedad anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="news-btn" data-dir="1" aria-label="Novedad siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+        </div>
+        <div class="news-track" tabindex="0"></div>
+        <div class="news-dots"></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="ofrecemos" class="section">
+    <div class="wrap">
+      <h2>¿Qué necesitas?</h2>
+      <p class="sub-lead">Elige un área y explora lo que ofrecemos.</p>
+      <div class="hub" role="tablist" aria-label="Áreas de SLA México">
+      <button type="button" class="hub-tab" role="tab" id="tab-productos" data-panel="productos" aria-controls="productos" aria-selected="true">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
+        <span class="hub-name">Productos</span><span class="hub-desc">Equipo y tecnología</span>
+      </button>
+      <button type="button" class="hub-tab" role="tab" id="tab-servicios" data-panel="servicios" aria-controls="servicios" aria-selected="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span class="hub-name">Servicios</span><span class="hub-desc">Atención 7x24 a nivel nacional</span>
+      </button>
+      <button type="button" class="hub-tab" role="tab" id="tab-capacitacion" data-panel="capacitacion" aria-controls="capacitacion" aria-selected="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+        <span class="hub-name">Capacitación</span><span class="hub-desc">Cursos y certificaciones</span>
+      </button>
+      <button type="button" class="hub-tab" role="tab" id="tab-logistica" data-panel="logistica" aria-controls="logistica" aria-selected="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h12v10H2z"/><path d="M14 10h4l4 3v3h-8"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+        <span class="hub-name">Logística</span><span class="hub-desc">Almacenes y entrega en todo el país</span>
+      </button>
+      <button type="button" class="hub-tab" role="tab" id="tab-mro" data-panel="mro" aria-controls="mro" aria-selected="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+        <span class="hub-name">MRO</span><span class="hub-desc">Maquinaria, refacciones y herramientas</span>
+      </button>
+      <button type="button" class="hub-tab" role="tab" id="tab-soporte" data-panel="soporte" aria-controls="soporte" aria-selected="false">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1"/><rect x="17" y="14" width="4" height="6" rx="1"/></svg>
+        <span class="hub-name">Soporte</span><span class="hub-desc">Servicio técnico y garantía Dell</span>
+      </button>
+      </div>
+
+      <!-- PRODUCTOS -->
+      <div id="productos" class="panel" role="tabpanel" aria-labelledby="tab-productos">
+        <h3 class="panel-title">Productos y tecnologías</h3>
+        <p class="sub-lead">Tecnologías de canal cerrado y las principales marcas del mercado.</p>
+        <div class="chips" role="group" aria-label="Filtrar por categoría">
+        <button type="button" class="chip" data-filter="infra" aria-pressed="true"><i class="dot c-infra"></i>Infraestructura</button>
+        <button type="button" class="chip" data-filter="seg" aria-pressed="false"><i class="dot c-seg"></i>Seguridad y licencias</button>
+        <button type="button" class="chip" data-filter="imp" aria-pressed="false"><i class="dot c-imp"></i>Impresión</button>
+        <button type="button" class="chip" data-filter="ref" aria-pressed="false"><i class="dot c-ref"></i>Refacciones y garantías</button>
+        <button type="button" class="chip" data-filter="hog" aria-pressed="false"><i class="dot c-hog"></i>Hogar y oficina</button>
+        </div>
+      <ul class="cards catalog">
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/computo.webp" alt="" loading="lazy"></div><span class="card-name">Cómputo</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/servidores.webp" alt="" loading="lazy"></div><span class="card-name">Servidores</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/almacenamiento.webp" alt="" loading="lazy"></div><span class="card-name">Almacenamiento</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/comunicaciones.webp" alt="" loading="lazy"></div><span class="card-name">Comunicaciones</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/cableado-estructurado.webp" alt="" loading="lazy"></div><span class="card-name">Cableado estructurado</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/energia.webp" alt="" loading="lazy"></div><span class="card-name">Energía</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/satelital.webp" alt="" loading="lazy"></div><span class="card-name">Satelital</span></li>
+        <li class="card" data-cat="infra"><div class="media"><img src="img/productos/videoconferencia-y-aulas-interactivas.webp" alt="" loading="lazy"></div><span class="card-name">Videoconferencia y aulas interactivas</span></li>
+        <li class="card" data-cat="seg" hidden><div class="media"><img src="img/productos/ciberseguridad.webp" alt="" loading="lazy"></div><span class="card-name">Ciberseguridad</span></li>
+        <li class="card" data-cat="seg" hidden><div class="media"><img src="img/productos/seguridad-y-control-de-acceso.webp" alt="" loading="lazy"></div><span class="card-name">Seguridad y control de acceso</span></li>
+        <li class="card" data-cat="seg" hidden><div class="media"><img src="img/productos/licenciamiento.webp" alt="" loading="lazy"></div><span class="card-name">Licenciamiento</span></li>
+        <li class="card" data-cat="imp" hidden><div class="media"><img src="img/productos/impresion-y-digitalizacion.webp" alt="" loading="lazy"></div><span class="card-name">Impresión y digitalización</span></li>
+        <li class="card" data-cat="imp" hidden><div class="media"><img src="img/productos/consumibles-de-impresion.webp" alt="" loading="lazy"></div><span class="card-name">Consumibles de impresión</span></li>
+        <li class="card" data-cat="ref" hidden><div class="media"><img src="img/productos/centro-de-garantias-dell.webp" alt="" loading="lazy"></div><span class="card-name">Centro de garantías Dell</span></li>
+        <li class="card" data-cat="ref" hidden><div class="media"><img src="img/productos/refacciones-originales.webp" alt="" loading="lazy"></div><span class="card-name">Refacciones originales</span></li>
+        <li class="card" data-cat="ref" hidden><div class="media"><img src="img/productos/accesorios-y-componentes.webp" alt="" loading="lazy"></div><span class="card-name">Accesorios y componentes</span></li>
+        <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/equipos-gamer.webp" alt="" loading="lazy"></div><span class="card-name">Equipos gamer</span></li>
+        <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/aparatos-electronicos.webp" alt="" loading="lazy"></div><span class="card-name">Aparatos electrónicos</span></li>
+        <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/equipos-electrodomesticos.webp" alt="" loading="lazy"></div><span class="card-name">Equipos electrodomésticos</span></li>
+        <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/productos-de-papeleria.webp" alt="" loading="lazy"></div><span class="card-name">Productos de papelería</span></li>
+      </ul>
+        <div class="block">
+          <h4 class="block-title">Las principales marcas tecnológicas</h4>
+      <ul class="logos logos-brands">
+        <li><img src="img/marcas/microsoft.png" alt="Microsoft" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/apple.png" alt="Apple" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/dell.png" alt="Dell" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/cisco.png" alt="Cisco" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/lenovo.png" alt="Lenovo" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/epson.png" alt="Epson" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/acer.png" alt="Acer" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/hp.png" alt="HP" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/ghia.png" alt="GHIA" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/brother.png" alt="Brother" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/samsung.png" alt="Samsung" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/fortinet.png" alt="Fortinet" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/intel.png" alt="Intel" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/mcafee.png" alt="McAfee" height="30" loading="lazy"></li>
+        <li><img src="img/marcas/asus.png" alt="Asus" height="30" loading="lazy"></li>
+      </ul>
+        </div>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div id="servicios" class="panel" role="tabpanel" aria-labelledby="tab-servicios" hidden>
+        <h3 class="panel-title">Servicios de IT</h3>
+        <p class="sub-lead">Atención integral para tu infraestructura, desde la instalación hasta la garantía.</p>
+      <ul class="cards">
+        <li class="card"><div class="media"><img src="img/servicios/mantenimientos-preventivos.webp" alt="" loading="lazy"></div><span class="card-name">Mantenimientos preventivos</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/mantenimientos-correctivos.webp" alt="" loading="lazy"></div><span class="card-name">Mantenimientos correctivos</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/instalaciones.webp" alt="" loading="lazy"></div><span class="card-name">Instalaciones</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/migraciones.webp" alt="" loading="lazy"></div><span class="card-name">Migraciones</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/clonaciones.webp" alt="" loading="lazy"></div><span class="card-name">Clonaciones</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/actualizaciones.webp" alt="" loading="lazy"></div><span class="card-name">Actualizaciones</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/garantias.webp" alt="" loading="lazy"></div><span class="card-name">Garantías</span></li>
+        <li class="card"><div class="media"><img src="img/servicios/ensambles.webp" alt="" loading="lazy"></div><span class="card-name">Ensambles</span></li>
+      </ul>
+        <div class="block clock-block">
+          <div class="clock" aria-hidden="true">
+            <svg viewBox="0 0 240 240"><g id="ticks"></g></svg>
+            <span class="clock-label">7x24</span>
+          </div>
+          <div>
+            <p class="big-pre">Atención 7 x 24</p>
+            <h4 class="big">Servicios de IT a nivel nacional</h4>
+            <p class="practices-title">Bajo las mejores prácticas de IT</p>
+            <ul class="practices">
+              <li>Niveles de servicio</li>
+              <li>Tiempos de respuesta</li>
+              <li>Tiempos de solución</li>
+              <li>Red a nivel nacional</li>
+              <li>Mesa de ayuda 24/7</li>
+              <li>Ingeniería certificada</li>
+              <li>Herramientas de gestión</li>
+            </ul>
+            <a class="btn" href="contacto.html?asunto=Servicios%20de%20IT%207x24">Hablar con un asesor</a>
+          </div>
+        </div>
+        <div class="block">
+          <h4 class="block-title">Casos de éxito</h4>
+          <p class="sub-lead">Proyectos de servicios con instituciones y empresas de todo el país.</p>
+      <ul class="logos logos-clients">
+        <li><img src="img/clientes/sre.png" alt="SRE Secretaría de Relaciones Exteriores" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/sedena.png" alt="SEDENA Secretaría de la Defensa Nacional" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/inee.png" alt="INEE" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/santander.png" alt="Santander" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/bim.png" alt="BIM Banco Inmobiliario Mexicano" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/cibanco.png" alt="CIBanco" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/fonacot.png" alt="Fonacot" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/cfe.png" alt="CFE Comisión Federal de Electricidad" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/inegi.png" alt="INEGI" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/home-depot.png" alt="The Home Depot" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/bachoco.png" alt="Bachoco" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/alpura.png" alt="Alpura" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/bansefi.png" alt="Bansefi" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/scotiabank.png" alt="Scotiabank" height="44" loading="lazy"></li>
+        <li><img src="img/clientes/movistar.png" alt="Movistar" height="44" loading="lazy"></li>
+      </ul>
+        </div>
+      </div>
+
+      <!-- CAPACITACIÓN -->
+      <div id="capacitacion" class="panel" role="tabpanel" aria-labelledby="tab-capacitacion" hidden>
+        <h3 class="panel-title">Capacitación</h3>
+        <p class="sub-lead">Cursos, asesorías y espacios para formar a tu equipo.</p>
+      <ul class="cards">
+        <li class="card"><div class="media"><img src="img/capacitacion/cursos-y-certificaciones.webp" alt="" loading="lazy"></div><span class="card-name">Cursos y certificaciones</span></li>
+        <li class="card"><div class="media"><img src="img/capacitacion/asesorias-tecnologicas.webp" alt="" loading="lazy"></div><span class="card-name">Asesorías tecnológicas</span></li>
+        <li class="card"><div class="media"><img src="img/capacitacion/renta-de-aulas.webp" alt="" loading="lazy"></div><span class="card-name">Renta de aulas</span></li>
+        <li class="card"><div class="media"><img src="img/capacitacion/renta-de-equipos.webp" alt="" loading="lazy"></div><span class="card-name">Renta de equipos</span></li>
+      </ul>
+        <div class="block">
+          <h4 class="block-title">IT &amp; Business Process</h4>
+      <ul class="logos logos-cert">
+        <li><img src="img/certificaciones/itil.png" alt="ITIL Licensed Affiliate" height="64" loading="lazy"></li>
+        <li><img src="img/certificaciones/pmi.png" alt="PMI Project Management Institute" height="64" loading="lazy"></li>
+        <li><img src="img/certificaciones/cobit.png" alt="COBIT Design and Implementation" height="64" loading="lazy"></li>
+      </ul>
+        </div>
+      </div>
+
+      <!-- LOGÍSTICA -->
+      <div id="logistica" class="panel" role="tabpanel" aria-labelledby="tab-logistica" hidden>
+        <h3 class="panel-title">Logística</h3>
+        <p class="sub-lead">Contamos con entrega en todo el país.</p>
+        <h4 class="block-title">Almacenes en las ciudades de</h4>
+      <ul class="cities">
+        <li><span class="city-photo"><img src="img/ciudades/chihuahua.jpg" alt="" loading="lazy"></span><span class="city-name">Chihuahua, Chih.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/cd-juarez.jpg" alt="" loading="lazy"></span><span class="city-name">Cd. Juárez, Chih.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/tijuana.jpg" alt="" loading="lazy"></span><span class="city-name">Tijuana, BC.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/mexicali.jpg" alt="" loading="lazy"></span><span class="city-name">Mexicali, BC.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/cd-obregon.jpg" alt="" loading="lazy"></span><span class="city-name">Cd. Obregón, Son.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/nogales.jpg" alt="" loading="lazy"></span><span class="city-name">Nogales, Son.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/cabo-san-lucas.jpg" alt="" loading="lazy"></span><span class="city-name">Cabo San Lucas, BCS.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/zacatecas.jpg" alt="" loading="lazy"></span><span class="city-name">Zacatecas, Zac.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/tepic.jpg" alt="" loading="lazy"></span><span class="city-name">Tepic, Nay.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/manzanillo.jpg" alt="" loading="lazy"></span><span class="city-name">Manzanillo, Col.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/chetumal.jpg" alt="" loading="lazy"></span><span class="city-name">Chetumal, QR.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/merida.jpg" alt="" loading="lazy"></span><span class="city-name">Mérida, Yuc.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/cancun.jpg" alt="" loading="lazy"></span><span class="city-name">Cancún, QR.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/durango.jpg" alt="" loading="lazy"></span><span class="city-name">Durango, Dgo.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/monclova.jpg" alt="" loading="lazy"></span><span class="city-name">Monclova, Coah.</span></li>
+        <li><span class="city-photo"><img src="img/ciudades/campeche.jpg" alt="" loading="lazy"></span><span class="city-name">Campeche, Camp.</span></li>
+      </ul>
+        <div class="block"><a class="btn" href="contacto.html?asunto=Log%C3%ADstica%20y%20env%C3%ADos">Consultar envíos</a></div>
+      </div>
+
+      <!-- MRO -->
+      <div id="mro" class="panel" role="tabpanel" aria-labelledby="tab-mro" hidden>
+        <h3 class="panel-title">Maquinaria MRO</h3>
+        <p class="sub-lead">Mantenimiento, reparación y operación para tu industria.</p>
+      <ul class="cards">
+        <li class="card"><div class="media"><img src="img/mro/maquinaria.webp" alt="" loading="lazy"></div><span class="card-name">Maquinaria</span></li>
+        <li class="card"><div class="media"><img src="img/mro/refacciones.webp" alt="" loading="lazy"></div><span class="card-name">Refacciones</span></li>
+        <li class="card"><div class="media"><img src="img/mro/herramientas.webp" alt="" loading="lazy"></div><span class="card-name">Herramientas</span></li>
+        <li class="card"><div class="media"><img src="img/mro/consumibles.webp" alt="" loading="lazy"></div><span class="card-name">Consumibles</span></li>
+      </ul>
+        <div class="block">
+          <h4 class="block-title">Principales marcas</h4>
+      <ul class="logos logos-mro">
+        <li><img src="img/mro/cat.png" alt="CAT" height="40" loading="lazy"></li>
+        <li><img src="img/mro/john-deere.png" alt="John Deere" height="40" loading="lazy"></li>
+        <li><img src="img/mro/cummins.png" alt="Cummins" height="40" loading="lazy"></li>
+        <li><img src="img/mro/abb.png" alt="ABB" height="40" loading="lazy"></li>
+        <li><img src="img/mro/berkeley.png" alt="Berkeley" height="40" loading="lazy"></li>
+        <li><img src="img/mro/fluke.png" alt="Fluke" height="40" loading="lazy"></li>
+        <li><img src="img/mro/wisdom.png" alt="Wisdom" height="40" loading="lazy"></li>
+        <li><img src="img/mro/axis.png" alt="Axis Communications" height="40" loading="lazy"></li>
+        <li><img src="img/mro/cdn.png" alt="CDN Resource Laboratories" height="40" loading="lazy"></li>
+        <li><img src="img/mro/tm-engineering.png" alt="TM Engineering" height="40" loading="lazy"></li>
+        <li><img src="img/mro/greenlee.png" alt="Greenlee" height="40" loading="lazy"></li>
+        <li><img src="img/mro/tsurumi-pump.png" alt="Tsurumi Pump" height="40" loading="lazy"></li>
+      </ul>
+        </div>
+      </div>
+
+      <!-- SOPORTE -->
+      <div id="soporte" class="panel" role="tabpanel" aria-labelledby="tab-soporte" hidden>
+        <h3 class="panel-title">Centro de soporte SLA</h3>
+        <p class="sub-lead">Atención técnica y administración de garantías.</p>
+      <ul class="cards">
+        <li class="card"><div class="media"><img src="img/soporte/servicio-tecnico.webp" alt="" loading="lazy"></div><span class="card-name">Servicio técnico</span></li>
+        <li class="card"><div class="media"><img src="img/soporte/administracion-de-garantia.webp" alt="" loading="lazy"></div><span class="card-name">Administración de garantía</span></li>
+        <li class="card"><div class="media"><img src="img/soporte/instalacion-de-software.webp" alt="" loading="lazy"></div><span class="card-name">Instalación de software</span></li>
+        <li class="card"><div class="media"><img src="img/soporte/polizas-de-mantenimiento.webp" alt="" loading="lazy"></div><span class="card-name">Pólizas de mantenimiento</span></li>
+      </ul>
+        <div class="block">
+          <h4 class="block-title">Proceso de garantía DELL</h4>
+          <p class="sub-lead">Para ser atendido en el centro de garantías DELL es indispensable que cuentes con un DPS de servicio.</p>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-n">Paso 1</span>
+              <p>Comunícate al <strong>Call Center DELL</strong> llamando al número</p>
+              <a class="phone" href="tel:+18665634425">001 866 563 44 25</a>
+              <p>o al</p>
+              <a class="phone" href="tel:018001113355">01 800 111 33 55</a>
+              <p>para que se te asigne un DPS de servicio.</p>
+            </li>
+            <li class="step">
+              <span class="step-n">Paso 2</span>
+              <p>Una vez que cuentes con tu DPS, márcanos para agendar tu cita al teléfono</p>
+              <a class="phone" href="tel:+526142590999">(614) 259 09 99</a>
+              <p>o acude a nuestras oficinas.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Aviso de Financiamiento: lleva a su propia página -->
+  <section class="band band-navy">
+    <div class="wrap teaser">
+      <div>
+        <h2 class="big">Arrendamiento puro o financiero</h2>
+        <p class="lead">Te ayudamos con el <strong class="accent">financiamiento</strong> en IT que necesitas.</p>
+      </div>
+      <a class="btn" href="financiamiento.html">Ver opciones de financiamiento</a>
+    </div>
+  </section>
+
+  <section id="marcas" class="section">
+    <div class="wrap">
+      <h2>Partner autorizado</h2>
+      <ul class="logos logos-main">
+        <li><img src="img/logos/dell-technologies.png" alt="Dell Technologies Authorized Partner" height="56" loading="lazy"></li>
+        <li><img src="img/logos/dell-emc.png" alt="Dell EMC" height="56" loading="lazy"></li>
+        <li><img src="img/logos/vmware.png" alt="VMware" height="56" loading="lazy"></li>
+        <li><img src="img/logos/microsoft-surface.png" alt="Microsoft Surface Authorized Reseller" height="56" loading="lazy"></li>
+        <li><img src="img/logos/hp-latex.png" alt="Powered by HP Latex Technologies" height="56" loading="lazy"></li>
+        <li><img src="img/logos/intel-gold-iot.png" alt="Intel Partner Gold, IoT Solutions" height="56" loading="lazy"></li>
+        <li><img src="img/logos/intel-gold.png" alt="Intel Partner Gold" height="56" loading="lazy"></li>
+        <li><img src="img/logos/intel-hpc.png" alt="Intel Partner HPC Specialist" height="56" loading="lazy"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Cierre: lleva a la página de Contacto -->
+  <section class="band band-dark">
+    <div class="wrap contact">
+      <h2 class="big">Brindamos soluciones óptimas en <span class="accent">Tecnologías de la Información</span> para el desarrollo de tu empresa.</h2>
+      <div class="contact-actions">
+        <a class="btn" href="contacto.html">Contáctanos</a>
+        <a class="btn btn-ghost" href="tel:+526142590999">Llamar al (614) 259 09 99</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <img src="img/logo-sla.png" alt="SLA México" width="110" height="55">
+    <nav aria-label="Pie de página">
+      <a href="#productos">Productos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#capacitacion">Capacitación</a>
+      <a href="#logistica">Logística</a>
+      <a href="#mro">MRO</a>
+      <a href="#soporte">Soporte</a>
+      <a href="financiamiento.html">Financiamiento</a>
+    </nav>
+    <div class="footer-links">
+      <a href="https://www.dell.com/support/home/" target="_blank" rel="noopener">Centro de garantía Dell</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a href="https://app.sladevelop.com/SlaMexicoVentas/Account/Login" target="_blank" rel="noopener noreferrer">Iniciar sesión</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> SLA México. Todos los derechos reservados.</span>
+    <a href="tel:+526142590999">Tel. (614) 259 09 99</a>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+526142590999">Llamar</a>
+  <a class="primary" href="contacto.html">Cotizar</a>
+</div>
+
+<script src="js/novedades.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

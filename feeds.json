@@ -1,0 +1,27 @@
+{
+  "_nota": "Edita esta lista para cambiar fuentes y filtros. Pon \"habilitado\": false para apagar una fuente. Revisa los términos de uso de cada medio antes de dejarla activa.",
+  "maxNoticias": 8,
+  "maxPorFuente": 2,
+  "maxCandidatas": 20,
+  "maxNuevasPorCorrida": 12,
+  "maxAntiguedadDias": 45,
+  "requerirImagen": true,
+  "palabrasClave": [
+    "laptop", "notebook", "ultrabook", "pc", "ai pc", "copilot+", "desktop", "mini pc", "workstation",
+    "server", "servidor", "data center", "datacenter", "cpu", "processor", "procesador", "gpu", "graphics card",
+    "ssd", "nvme", "storage", "nas", "router", "switch", "firewall", "networking", "wi-fi", "cybersecurity", "ransomware",
+    "thinkpad", "latitude", "precision", "poweredge", "elitebook", "zbook", "surface", "macbook", "mac mini",
+    "dell", "hp", "lenovo", "asus", "acer", "msi", "intel", "amd", "nvidia", "qualcomm", "snapdragon", "cisco", "fortinet"
+  ],
+  "excluir": ["deal", "deals", "discount", "coupon", "% off", "black friday", "cyber monday", "giveaway", "gift guide", "best"],
+  "fuentes": [
+    { "nombre": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "habilitado": true },
+    { "nombre": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "habilitado": true },
+    { "nombre": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "habilitado": true },
+    { "nombre": "TechRadar", "url": "https://www.techradar.com/rss", "habilitado": true },
+    { "nombre": "Engadget", "url": "https://www.engadget.com/rss.xml", "habilitado": true },
+    { "nombre": "The Register", "url": "https://www.theregister.com/headlines.atom", "habilitado": true },
+    { "nombre": "ServeTheHome", "url": "https://www.servethehome.com/feed/", "habilitado": true },
+    { "nombre": "PCWorld", "url": "https://www.pcworld.com/feed", "habilitado": true }
+  ]
+}

@@ -1,0 +1,42 @@
+PROYECTO SLA MEXICO
+===================
+sitio/                          Sitio web (lo que se publica).
+scripts/actualizar-novedades.mjs  Trae noticias de TI desde RSS y las resume/traduce con la API de Claude.
+feeds.json                      Fuentes y filtros. Aquí se agregan o apagan medios.
+.github/workflows/novedades.yml Tarea programada de GitHub (cada 6 horas).
+package.json / package-lock.json  Dependencia del script.
+
+PUESTA EN MARCHA (una sola vez)
+1. Crea un repositorio en GitHub y sube TODO el contenido de esta carpeta.
+2. Crea una clave de API en console.anthropic.com. En GitHub: Settings > Secrets and variables > Actions >
+   New repository secret. Nombre: ANTHROPIC_API_KEY. Valor: tu clave. Nunca pongas la clave en el código.
+3. En GitHub: pestaña Actions > "Actualizar novedades" > Run workflow. Revisa el registro: cada medio muestra
+   cuántas entradas leyó o su error. Al terminar aparece sitio/data/novedades.json en el repositorio.
+4. En Cloudflare Pages: Create > Connect to Git > elige el repositorio.
+   Build command: (vacío). Build output directory: sitio.
+5. Cada vez que la tarea cambie el JSON, Cloudflare vuelve a publicar solo.
+   Verifica el primer ciclo completo; si no se republica, revisa la integración de Cloudflare con GitHub.
+
+COMO FUNCIONA
+- Cada 6 horas se leen los RSS de feeds.json, se filtran por palabras clave y antigüedad (45 días), se quitan duplicados
+  y se busca la imagen (la del RSS o la og:image de la nota).
+- Claude escribe título y resumen en español con sus propias palabras, asigna una categoría y descarta lo que no sea de TI.
+- Solo se procesan noticias nuevas; las ya procesadas se reutilizan, así se limita el costo de la API.
+  Hasta 12 noticias nuevas por corrida (maxNuevasPorCorrida en feeds.json). El modelo se cambia con la variable MODELO.
+- Si ningún medio responde, o no hay cambios, no se modifica nada.
+- Si falta data/novedades.json o falla, el panel muestra la lista manual de sitio/js/novedades.js.
+- Sin ANTHROPIC_API_KEY el script funciona, pero guarda las noticias en inglés.
+
+IMPORTANTE (derechos y términos)
+- Cada medio tiene sus propios términos para su RSS e imágenes. Muchos limitan el uso comercial. Revísalos antes de dejar
+  una fuente activa y apaga con "habilitado": false las que no lo permitan.
+- El sitio muestra un resumen propio, el crédito de la fuente, el enlace a la nota y la imagen enlazada desde la fuente
+  (no se copia). Si una fuente pide retirar su contenido, apágala en feeds.json.
+- Las URL de los RSS pueden cambiar. Si un medio da error en el registro de Actions, corrige su URL en feeds.json.
+- Si el repositorio queda mucho tiempo sin actividad, GitHub puede pausar las tareas programadas: revisa la pestaña Actions.
+
+PRUEBA LOCAL (opcional, requiere Node 20 o mayor)
+  npm ci
+  ANTHROPIC_API_KEY=tu_clave node scripts/actualizar-novedades.mjs
+
+IMAGENES DEL SITIO: ver sitio/LEEME.txt

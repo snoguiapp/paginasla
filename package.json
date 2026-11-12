@@ -1,0 +1,15 @@
+{
+  "name": "sla-mexico-novedades",
+  "private": true,
+  "type": "module",
+  "description": "Trae noticias de TI desde RSS, las traduce y resume con la API de Claude y las guarda en sitio/data/novedades.json",
+  "scripts": {
+    "actualizar": "node scripts/actualizar-novedades.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.12.0"
+  }
+}

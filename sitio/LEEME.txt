@@ -1,0 +1,28 @@
+Abrir la carpeta en VS Code > clic derecho en index.html > Open with Live Server.
+
+IMAGENES (la página funciona sin ellas):
+  img/logo-sla.png
+
+ESPACIOS DE IMAGEN CON ANIMACION (uno por producto/servicio). Formato .webp (puede ser animado) o convierte tu GIF/video a WebP animado.
+Proporción recomendada 4:3 (ejemplo 800x600). Si falta el archivo se ve un fondo azul animado.
+  img/productos/   computo.webp, servidores.webp, almacenamiento.webp, comunicaciones.webp, cableado-estructurado.webp, energia.webp, satelital.webp, videoconferencia-y-aulas-interactivas.webp, ciberseguridad.webp, seguridad-y-control-de-acceso.webp, licenciamiento.webp, impresion-y-digitalizacion.webp, consumibles-de-impresion.webp, centro-de-garantias-dell.webp, refacciones-originales.webp, accesorios-y-componentes.webp, equipos-gamer.webp, aparatos-electronicos.webp, equipos-electrodomesticos.webp, productos-de-papeleria.webp
+  img/servicios/   mantenimientos-preventivos.webp, mantenimientos-correctivos.webp, instalaciones.webp, migraciones.webp, clonaciones.webp, actualizaciones.webp, garantias.webp, ensambles.webp
+  img/capacitacion/   cursos-y-certificaciones.webp, asesorias-tecnologicas.webp, renta-de-aulas.webp, renta-de-equipos.webp
+  img/mro/   maquinaria.webp, refacciones.webp, herramientas.webp, consumibles.webp
+  img/soporte/   servicio-tecnico.webp, administracion-de-garantia.webp, instalacion-de-software.webp, polizas-de-mantenimiento.webp
+  img/financiamiento/   credito.webp, arrendamiento-puro.webp, arrendamiento-financiero.webp, financiamiento.webp
+
+NOVEDADES (panel del inicio, 16:10, ej. 960x600): img/novedades/   pro-precision-gb10-64gb.webp, poweredge-m9882.webp, pro-precision-9-torres.webp, pro-precision-5-7-laptops.webp, dell-pro-7.webp, pro-5-micro-monitores.webp
+Para cambiar textos/enlaces o agregar novedades: editar js/novedades.js
+
+LOGOS (.png; si falta uno se muestra el nombre en texto):
+  img/logos/   dell-technologies, dell-emc, vmware, microsoft-surface, hp-latex, intel-gold-iot, intel-gold, intel-hpc
+  img/marcas/   microsoft, apple, dell, cisco, lenovo, epson, acer, hp, ghia, brother, samsung, fortinet, intel, mcafee, asus
+  img/mro/   cat, john-deere, cummins, abb, berkeley, fluke, wisdom, axis, cdn, tm-engineering, greenlee, tsurumi-pump
+  img/clientes/   sre, sedena, inee, santander, bim, cibanco, fonacot, cfe, inegi, home-depot, bachoco, alpura, bansefi, scotiabank, movistar
+  img/certificaciones/   itil, pmi, cobit
+
+CIUDADES (.jpg, círculo):
+  img/ciudades/   chihuahua, cd-juarez, tijuana, mexicali, cd-obregon, nogales, cabo-san-lucas, zacatecas, tepic, manzanillo, chetumal, merida, cancun, durango, monclova, campeche
+
+FORMULARIO: crea una clave gratis en web3forms.com y reemplaza TU_CLAVE_WEB3FORMS en contacto.html (aparece 1 vez).
