@@ -1,0 +1,86 @@
+{
+  "actualizado": "2026-11-12T22:52:40.726Z",
+  "items": [
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T21:45:00.000Z",
+      "titulo": "‘It’s a mistake’: reactions from tech leaders on Jensen Huang’s resignation",
+      "texto": "Nvidia announced this morning that Jensen Huang has resigned as CEO following reports of two affairs, including one with an alleged Chinese spy and one with a direct report. The situation surrounding Huang has unfolded…",
+      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STKP210_JENSEN_HUANG_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "enlace": "https://www.theverge.com/tech/1032434/nvidia-jensen-huang-resignation-reactions",
+      "fuente": "The Verge",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T21:45:00.000Z",
+      "titulo": "First RAM, now circuit boards: AI demand is stretching some PCB orders to 30 months",
+      "texto": "PC shipments just fell 20%, yet PC makers still can't get enough circuit boards.",
+      "imagen": "https://cdn.mos.cms.futurecdn.net/T5wJFajZ5dYniSDHxbSEGH-1920-80.png",
+      "enlace": "https://www.techradar.com/pro/first-ram-now-circuit-boards-ai-demand-is-stretching-some-pcb-orders-to-30-months",
+      "fuente": "TechRadar",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T21:00:00.000Z",
+      "titulo": "Here are the 25 original Xbox games you can now play on PC",
+      "texto": "For the 25th anniversary of Xbox, Microsoft is beginning to make good on its paid \"next-gen game preservation\" promise. Starting today, you can play 25 different original Xbox games on your Windows PC, as long as you…",
+      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/XBOX_PCBackCompat.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,93.955555555556",
+      "enlace": "https://www.theverge.com/games/1032321/microsoft-xbox-original-games-pc-backwards-compatibility",
+      "fuente": "The Verge",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T20:06:29.000Z",
+      "titulo": "Jensen Huang's self-sabotage sends Nvidia into a midlife crisis",
+      "texto": "The competition is circling like vultures",
+      "imagen": "https://image.theregister.com/?imageId=236933&width=800",
+      "enlace": "https://www.theregister.com/ai-and-ml/2026/11/12/jensen-huangs-self-sabotage-sends-nvidia-into-a-midlife-crisis/5309480",
+      "fuente": "The Register",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T20:00:20.000Z",
+      "titulo": "Gears of War 2 y 3 ya tienen multijugador en PC gracias a un proyecto fan",
+      "texto": "Si eres fan de los juegos Gears of War 2 y 3 , estás de suerte, y es que un proyecto de un fan ha conseguido que estos títulos, los cuales no tenían una versión de PC multijugador, ya sean compatibles con esta, pudiendo…",
+      "imagen": "https://hardzone.es/app/uploads-hardzone.es/2026/11/gears-of-war.jpg",
+      "enlace": "https://hardzone.es/noticias/juegos/gears-war-multijugador-pc-cogbox/",
+      "fuente": "HardZone",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T19:26:47.000Z",
+      "titulo": "Who is Collette Kress, NVIDIA's interim CEO?",
+      "texto": "Kress spent 25 years in various finance roles before joining NVIDIA in 2013",
+      "imagen": "https://www.engadget.com/img/gallery/who-is-collette-kress-nvidias-interim-ceo/l-intro-1794511529.jpg",
+      "enlace": "https://www.engadget.com/2315274/who-is-collette-kress-nvidia-ceo/",
+      "fuente": "Engadget",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T19:23:31.000Z",
+      "titulo": "Jensen Huang dimite como CEO de NVIDIA: Colette Kress asume el cargo de forma interina",
+      "texto": "Jensen Huang ha dimitido como presidente, consejero delegado y miembro del consejo de administración de NVIDIA, con efecto inmediato. Así lo ha anunciado el consejo de la compañía en un comunicado oficial, en el que…",
+      "imagen": "https://www.muycomputer.com/2026/11/12/jensen-huang-dimite-como-ceo-de-nvidia-colette-kress-asume-el-cargo-de-forma-interina/",
+      "enlace": "https://www.muycomputer.com/2026/11/12/jensen-huang-dimite-como-ceo-de-nvidia-colette-kress-asume-el-cargo-de-forma-interina/",
+      "fuente": "MuyComputer",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T18:43:22.000Z",
+      "titulo": "CORSAIR HX1000i SHIFT CRYSTAL: una fuente que deja ver mucho más que su interior",
+      "texto": "CORSAIR HX1000i SHIFT CRYSTAL demuestra que incluso un componente tan discreto como la fuente de alimentación puede convertirse en uno de los grandes protagonistas de nuestro PC. Tradicionalmente, estos dispositivos han…",
+      "imagen": "https://www.muycomputer.com/wp-content/uploads/2026/11/CORSAIR-2-1.jpg",
+      "enlace": "https://www.muycomputer.com/2026/11/12/corsair-hx1000i-shift-crystal-una-fuente-que-deja-ver-mucho-mas-que-su-interior/",
+      "fuente": "MuyComputer",
+      "traducido": false
+    }
+  ],
+  "descartados": []
+}
