@@ -1,5 +1,5 @@
 {
-  "_nota": "Edita esta lista para cambiar fuentes y filtros. Pon \"habilitado\": false para apagar una fuente. Revisa los términos de uso de cada medio antes de dejarla activa.",
+  "_nota": "Edita esta lista para cambiar fuentes y filtros. Pon \"habilitado\": false para apagar una fuente. Las fuentes en español no necesitan traducción. Revisa los términos de uso de cada medio antes de dejarla activa.",
   "maxNoticias": 8,
   "maxPorFuente": 2,
   "maxCandidatas": 20,
@@ -7,21 +7,140 @@
   "maxAntiguedadDias": 45,
   "requerirImagen": true,
   "palabrasClave": [
-    "laptop", "notebook", "ultrabook", "pc", "ai pc", "copilot+", "desktop", "mini pc", "workstation",
-    "server", "servidor", "data center", "datacenter", "cpu", "processor", "procesador", "gpu", "graphics card",
-    "ssd", "nvme", "storage", "nas", "router", "switch", "firewall", "networking", "wi-fi", "cybersecurity", "ransomware",
-    "thinkpad", "latitude", "precision", "poweredge", "elitebook", "zbook", "surface", "macbook", "mac mini",
-    "dell", "hp", "lenovo", "asus", "acer", "msi", "intel", "amd", "nvidia", "qualcomm", "snapdragon", "cisco", "fortinet"
+    "laptop",
+    "notebook",
+    "ultrabook",
+    "pc",
+    "ai pc",
+    "copilot+",
+    "desktop",
+    "mini pc",
+    "workstation",
+    "server",
+    "servidor",
+    "data center",
+    "datacenter",
+    "cpu",
+    "processor",
+    "procesador",
+    "gpu",
+    "graphics card",
+    "ssd",
+    "nvme",
+    "storage",
+    "nas",
+    "router",
+    "switch",
+    "firewall",
+    "networking",
+    "wi-fi",
+    "cybersecurity",
+    "ransomware",
+    "thinkpad",
+    "latitude",
+    "precision",
+    "poweredge",
+    "elitebook",
+    "zbook",
+    "surface",
+    "macbook",
+    "mac mini",
+    "dell",
+    "hp",
+    "lenovo",
+    "asus",
+    "acer",
+    "msi",
+    "intel",
+    "amd",
+    "nvidia",
+    "qualcomm",
+    "snapdragon",
+    "cisco",
+    "fortinet",
+    "portátil",
+    "portatil",
+    "ordenador",
+    "computadora",
+    "tarjeta gráfica",
+    "almacenamiento",
+    "ciberseguridad",
+    "seguridad informática"
   ],
-  "excluir": ["deal", "deals", "discount", "coupon", "% off", "black friday", "cyber monday", "giveaway", "gift guide", "best"],
+  "excluir": [
+    "deal",
+    "deals",
+    "discount",
+    "coupon",
+    "% off",
+    "black friday",
+    "cyber monday",
+    "giveaway",
+    "gift guide",
+    "best",
+    "oferta",
+    "ofertas",
+    "descuento",
+    "cupón",
+    "chollo",
+    "chollos",
+    "lo mejor"
+  ],
   "fuentes": [
-    { "nombre": "The Verge", "url": "https://www.theverge.com/rss/index.xml", "habilitado": true },
-    { "nombre": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/technology-lab", "habilitado": true },
-    { "nombre": "Tom's Hardware", "url": "https://www.tomshardware.com/feeds/all", "habilitado": true },
-    { "nombre": "TechRadar", "url": "https://www.techradar.com/rss", "habilitado": true },
-    { "nombre": "Engadget", "url": "https://www.engadget.com/rss.xml", "habilitado": true },
-    { "nombre": "The Register", "url": "https://www.theregister.com/headlines.atom", "habilitado": true },
-    { "nombre": "ServeTheHome", "url": "https://www.servethehome.com/feed/", "habilitado": true },
-    { "nombre": "PCWorld", "url": "https://www.pcworld.com/feed", "habilitado": true }
+    {
+      "nombre": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "habilitado": true
+    },
+    {
+      "nombre": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
+      "habilitado": true
+    },
+    {
+      "nombre": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/feeds/all",
+      "habilitado": true
+    },
+    {
+      "nombre": "TechRadar",
+      "url": "https://www.techradar.com/rss",
+      "habilitado": true
+    },
+    {
+      "nombre": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "habilitado": true
+    },
+    {
+      "nombre": "The Register",
+      "url": "https://www.theregister.com/headlines.atom",
+      "habilitado": true
+    },
+    {
+      "nombre": "ServeTheHome",
+      "url": "https://www.servethehome.com/feed/",
+      "habilitado": true
+    },
+    {
+      "nombre": "PCWorld",
+      "url": "https://www.pcworld.com/feed",
+      "habilitado": true
+    },
+    {
+      "nombre": "MuyComputer",
+      "url": "https://www.muycomputer.com/feed/",
+      "habilitado": true
+    },
+    {
+      "nombre": "HardZone",
+      "url": "https://hardzone.es/feed/",
+      "habilitado": true
+    },
+    {
+      "nombre": "Hipertextual",
+      "url": "https://hipertextual.com/feed",
+      "habilitado": true
+    }
   ]
 }
