@@ -63,6 +63,21 @@ $$('.chip').forEach(chip => chip.addEventListener('click', () => {
   });
 }));
 
+/* ===== Financiamiento: en pantallas táctiles, tocar abre/cierra el detalle ===== */
+const finCards = $$('.fin-card');
+if (finCards.length) {
+  const sinCursor = matchMedia('(hover: none)');
+  finCards.forEach(card => card.addEventListener('click', e => {
+    if (!sinCursor.matches) return;
+    e.stopPropagation();
+    const abrir = !card.classList.contains('open');
+    finCards.forEach(c => c.classList.remove('open'));
+    card.classList.toggle('open', abrir);
+  }));
+  document.addEventListener('click', () => finCards.forEach(c => c.classList.remove('open')));
+  addEventListener('keydown', e => { if (e.key === 'Escape') finCards.forEach(c => c.classList.remove('open')); });
+}
+
 /* ===== Las animaciones de las imágenes solo corren mientras se ven ===== */
 const cardIO = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('in-view', e.isIntersecting)),
   { rootMargin: '80px' });
