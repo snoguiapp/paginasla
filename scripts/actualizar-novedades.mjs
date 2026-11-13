@@ -83,7 +83,7 @@ async function resumirConClaude(n) {
     '- "titulo": título en español de México, máximo 90 caracteres.\n' +
     '- "texto": 1 o 2 oraciones en español de México, máximo 240 caracteres, redactadas con tus palabras (no copies frases del original).\n' +
     `- "etiqueta": exactamente una de: ${ETIQUETAS.join(', ')}.\n` +
-    'Si la nota no trata de equipos, componentes, redes, seguridad o software de TI, devuelve {"descartar": true}.';
+    'Si la nota no trata de un producto de TI de la marca (lanzamiento, características, disponibilidad o prueba de equipos, componentes, software o servicios), por ejemplo finanzas, demandas o personal, devuelve {"descartar": true}.';
   const r = await fetch(API_URL, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': CLAVE, 'anthropic-version': '2023-06-01' },
@@ -132,13 +132,27 @@ async function main() {
   }
   if (!respondieron) { console.error('Ningún feed respondió. No cambio nada.'); process.exit(1); }
 
-  const incluir = rx(cfg.palabrasClave), excluir = cfg.excluir?.length ? rx(cfg.excluir) : null;
-  const desde = Date.now() - (cfg.maxAntiguedadDias ?? 45) * 864e5;
+  const marcas = (cfg.marcas ?? []).map(m => ({ nombre: m.nombre, peso: m.peso ?? 1, rx: rx(m.alias ?? [m.nombre]) }));
+  const incluir = cfg.palabrasClave?.length ? rx(cfg.palabrasClave) : null;   // modo antiguo, sin marcas
+  const producto = cfg.palabrasProducto?.length ? rx(cfg.palabrasProducto) : null;
+  const excluir = cfg.excluir?.length ? rx(cfg.excluir) : null;
+  const puntuar = c => {
+    let mejor = { peso: 0, marca: '' };
+    for (const m of marcas) {
+      const p = m.rx.test(c.titulo) ? m.peso * 2 : m.rx.test(c.resumen) ? m.peso : 0;
+      if (p > mejor.peso) mejor = { peso: p, marca: m.nombre };
+    }
+    return mejor;
+  };
+  const desde = Date.now() - (cfg.maxAntiguedadDias ?? 30) * 864e5;
   const links = new Set(), titulos = new Set();
   candidatas = candidatas
     .filter(c => c.fecha.getTime() >= desde && c.fecha.getTime() <= Date.now() + 864e5 && !descartados.has(c.enlace))
-    .filter(c => incluir.test(c.titulo + ' ' + c.resumen) && !(excluir && excluir.test(c.titulo)))
-    .sort((a, b) => b.fecha - a.fecha)
+    .filter(c => !(excluir && excluir.test(c.titulo)))
+    .map(c => ({ ...c, ...(marcas.length ? puntuar(c) : { peso: 1, marca: '' }) }))
+    .filter(c => (marcas.length ? c.peso > 0 : !incluir || incluir.test(c.titulo + ' ' + c.resumen))
+      && (!producto || producto.test(c.titulo + ' ' + c.resumen)))
+    .sort((a, b) => b.peso - a.peso || b.fecha - a.fecha)
     .filter(c => { const k = norm(c.titulo); if (links.has(c.enlace) || titulos.has(k)) return false; links.add(c.enlace); titulos.add(k); return true; });
 
   const porFuente = {}, elegidas = [];
@@ -157,19 +171,20 @@ async function main() {
     const imagen = previa?.imagen || url(c.imagen, c.enlace, true) || await ogImagen(c.enlace);
     if (!imagen && cfg.requerirImagen !== false) { descartados.add(c.enlace); continue; }
     nuevas++;
-    const item = { etiqueta: 'Otros', fechaISO: c.fecha.toISOString(), titulo: c.titulo, texto: recortar(c.resumen, 220),
+    const item = { etiqueta: c.marca || 'Otros', marca: c.marca, peso: c.peso, fechaISO: c.fecha.toISOString(), titulo: c.titulo, texto: recortar(c.resumen, 220),
       imagen, enlace: c.enlace, fuente: c.fuente, traducido: false };
     if (CLAVE) {
       try {
         const o = await resumirConClaude(c);
         if (o.descartar) { descartados.add(c.enlace); console.log(`Descartada: ${c.titulo}`); continue; }
         Object.assign(item, o, { traducido: true });
+        item.etiqueta = c.marca || o.etiqueta;
       } catch (e) { console.warn(`No se pudo resumir "${c.titulo}" (${e.message})`); }
     }
     finales.push(item);
   }
 
-  finales.sort((a, b) => b.fechaISO.localeCompare(a.fechaISO));
+  finales.sort((a, b) => (b.peso ?? 0) - (a.peso ?? 0) || b.fechaISO.localeCompare(a.fechaISO));
   const items = finales.slice(0, cfg.maxNoticias ?? 8);
   if (!items.length) { console.warn('Sin noticias nuevas válidas. Dejo el archivo como está.'); return; }
 
