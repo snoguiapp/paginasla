@@ -1,71 +1,195 @@
 {
-  "_nota": "Edita esta lista para cambiar fuentes y filtros. Pon \"habilitado\": false para apagar una fuente. Las fuentes en español no necesitan traducción. Revisa los términos de uso de cada medio antes de dejarla activa.",
+  "_nota": "Panel de productos de las marcas que maneja SLA. Una nota entra solo si menciona una de estas marcas Y habla de un producto (palabrasProducto). 'peso' decide el orden: más alto sale primero (Dell e Intel son los más altos). Pon \"habilitado\": false para apagar un medio. Revisa los términos de uso de cada medio.",
   "maxNoticias": 8,
   "maxPorFuente": 2,
-  "maxCandidatas": 20,
+  "maxCandidatas": 30,
   "maxNuevasPorCorrida": 12,
-  "maxAntiguedadDias": 45,
+  "maxAntiguedadDias": 30,
   "requerirImagen": true,
-  "palabrasClave": [
-    "laptop",
-    "notebook",
-    "ultrabook",
-    "pc",
-    "ai pc",
-    "copilot+",
-    "desktop",
-    "mini pc",
-    "workstation",
-    "server",
-    "servidor",
-    "data center",
-    "datacenter",
-    "cpu",
-    "processor",
-    "procesador",
-    "gpu",
-    "graphics card",
-    "ssd",
-    "nvme",
-    "storage",
-    "nas",
-    "router",
-    "switch",
-    "firewall",
-    "networking",
-    "wi-fi",
-    "cybersecurity",
-    "ransomware",
-    "thinkpad",
-    "latitude",
-    "precision",
-    "poweredge",
-    "elitebook",
-    "zbook",
-    "surface",
-    "macbook",
-    "mac mini",
-    "dell",
-    "hp",
-    "lenovo",
-    "asus",
-    "acer",
-    "msi",
-    "intel",
-    "amd",
-    "nvidia",
-    "qualcomm",
-    "snapdragon",
-    "cisco",
-    "fortinet",
-    "portátil",
-    "portatil",
-    "ordenador",
-    "computadora",
-    "tarjeta gráfica",
-    "almacenamiento",
-    "ciberseguridad",
-    "seguridad informática"
+  "marcas": [
+    {
+      "nombre": "Dell",
+      "peso": 3,
+      "alias": [
+        "dell",
+        "alienware",
+        "poweredge",
+        "dell latitude",
+        "dell precision",
+        "xps",
+        "optiplex",
+        "dell pro",
+        "powerstore",
+        "vxrail"
+      ]
+    },
+    {
+      "nombre": "Intel",
+      "peso": 3,
+      "alias": [
+        "intel",
+        "core ultra",
+        "xeon",
+        "intel arc"
+      ]
+    },
+    {
+      "nombre": "Microsoft",
+      "peso": 2,
+      "alias": [
+        "microsoft",
+        "microsoft surface",
+        "surface pro",
+        "surface laptop",
+        "surface studio",
+        "copilot+"
+      ]
+    },
+    {
+      "nombre": "Apple",
+      "peso": 2,
+      "alias": [
+        "apple",
+        "macbook",
+        "imac",
+        "mac mini",
+        "mac studio",
+        "ipad"
+      ]
+    },
+    {
+      "nombre": "HP",
+      "peso": 2,
+      "alias": [
+        "hp",
+        "hp inc",
+        "elitebook",
+        "zbook",
+        "hp omen",
+        "hp envy"
+      ]
+    },
+    {
+      "nombre": "Lenovo",
+      "peso": 2,
+      "alias": [
+        "lenovo",
+        "thinkpad",
+        "thinkcentre",
+        "thinkstation",
+        "lenovo legion",
+        "lenovo yoga"
+      ]
+    },
+    {
+      "nombre": "Cisco",
+      "peso": 1,
+      "alias": [
+        "cisco",
+        "meraki"
+      ]
+    },
+    {
+      "nombre": "Fortinet",
+      "peso": 1,
+      "alias": [
+        "fortinet",
+        "fortigate"
+      ]
+    },
+    {
+      "nombre": "Samsung",
+      "peso": 1,
+      "alias": [
+        "samsung"
+      ]
+    },
+    {
+      "nombre": "Epson",
+      "peso": 1,
+      "alias": [
+        "epson"
+      ]
+    },
+    {
+      "nombre": "Brother",
+      "peso": 1,
+      "alias": [
+        "brother printer",
+        "brother industries",
+        "brother mfc"
+      ]
+    },
+    {
+      "nombre": "Acer",
+      "peso": 1,
+      "alias": [
+        "acer",
+        "acer predator"
+      ]
+    },
+    {
+      "nombre": "Asus",
+      "peso": 1,
+      "alias": [
+        "asus",
+        "asus rog",
+        "rog ally",
+        "zenbook",
+        "vivobook"
+      ]
+    },
+    {
+      "nombre": "McAfee",
+      "peso": 1,
+      "alias": [
+        "mcafee"
+      ]
+    },
+    {
+      "nombre": "VMware",
+      "peso": 1,
+      "alias": [
+        "vmware"
+      ]
+    },
+    {
+      "nombre": "GHIA",
+      "peso": 1,
+      "alias": [
+        "ghia"
+      ]
+    }
+  ],
+  "palabrasProducto": [
+    "new",
+    "launch",
+    "launches",
+    "launched",
+    "announce",
+    "announces",
+    "announced",
+    "unveil",
+    "unveils",
+    "unveiled",
+    "introduces",
+    "debut",
+    "debuts",
+    "available",
+    "review",
+    "hands-on",
+    "lanza",
+    "lanzamiento",
+    "presenta",
+    "anuncia",
+    "nuevo",
+    "nueva",
+    "nuevos",
+    "nuevas",
+    "disponible",
+    "llega",
+    "análisis",
+    "prueba"
   ],
   "excluir": [
     "deal",
@@ -84,7 +208,16 @@
     "cupón",
     "chollo",
     "chollos",
-    "lo mejor"
+    "lo mejor",
+    "lawsuit",
+    "layoffs",
+    "earnings",
+    "stock",
+    "shares",
+    "antitrust",
+    "demanda",
+    "despidos",
+    "acciones"
   ],
   "fuentes": [
     {
