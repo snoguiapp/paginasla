@@ -2,7 +2,7 @@ name: Actualizar novedades
 
 on:
   schedule:
-    - cron: '17 */6 * * *'   # cada 6 horas
+    - cron: '17 13 * * *'    # una vez al día, 13:17 UTC (07:17 en Chihuahua)
   workflow_dispatch:         # botón "Run workflow" en la pestaña Actions
 
 permissions:
