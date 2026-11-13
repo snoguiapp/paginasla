@@ -1,33 +1,53 @@
 {
-  "actualizado": "2026-11-12T22:52:40.726Z",
+  "actualizado": "2026-11-13T06:52:14.885Z",
   "items": [
     {
       "etiqueta": "Otros",
-      "fechaISO": "2026-11-12T21:45:00.000Z",
-      "titulo": "‘It’s a mistake’: reactions from tech leaders on Jensen Huang’s resignation",
-      "texto": "Nvidia announced this morning that Jensen Huang has resigned as CEO following reports of two affairs, including one with an alleged Chinese spy and one with a direct report. The situation surrounding Huang has unfolded…",
-      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STKP210_JENSEN_HUANG_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-      "enlace": "https://www.theverge.com/tech/1032434/nvidia-jensen-huang-resignation-reactions",
-      "fuente": "The Verge",
+      "fechaISO": "2026-11-13T03:41:24.000Z",
+      "titulo": "Singapore says US authorities, and Supermicro, hardly helped investigation of Jensen Huang’s Chinese friend",
+      "texto": "Seized passport during probe of suspected paperwork fibs that hid server shipments to parts unknown",
+      "imagen": "https://image.theregister.com/?imageId=236933&width=800",
+      "enlace": "https://www.theregister.com/legal/2026/11/13/singapore-says-us-authorities-and-supermicro-hardly-helped-investigation-of-jensen-huangs-chinese-friend/5309579",
+      "fuente": "The Register",
       "traducido": false
     },
     {
       "etiqueta": "Otros",
-      "fechaISO": "2026-11-12T21:45:00.000Z",
-      "titulo": "First RAM, now circuit boards: AI demand is stretching some PCB orders to 30 months",
-      "texto": "PC shipments just fell 20%, yet PC makers still can't get enough circuit boards.",
-      "imagen": "https://cdn.mos.cms.futurecdn.net/T5wJFajZ5dYniSDHxbSEGH-1920-80.png",
-      "enlace": "https://www.techradar.com/pro/first-ram-now-circuit-boards-ai-demand-is-stretching-some-pcb-orders-to-30-months",
+      "fechaISO": "2026-11-13T01:25:00.000Z",
+      "titulo": "Seagate is reviving a 20-year-old technology to turn its newest 20TB HDD into a pseudo-SSD — but it won't come cheap",
+      "texto": "Seagate's FireCuda Forge uses Alkemi to prioritize frequently accessed files on separately purchased NVMe storage, combining mechanical capacity with faster data retrieval.",
+      "imagen": "https://cdn.mos.cms.futurecdn.net/EmYgoj6jz3eSA8CL5qiqTK-1920-80.jpg",
+      "enlace": "https://www.techradar.com/pro/seagate-is-reviving-a-20-year-old-technology-to-turn-its-newest-20tb-hdd-into-a-pseudo-ssd-thats-but-it-wont-come-cheap",
       "fuente": "TechRadar",
       "traducido": false
     },
     {
       "etiqueta": "Otros",
-      "fechaISO": "2026-11-12T21:00:00.000Z",
-      "titulo": "Here are the 25 original Xbox games you can now play on PC",
-      "texto": "For the 25th anniversary of Xbox, Microsoft is beginning to make good on its paid \"next-gen game preservation\" promise. Starting today, you can play 25 different original Xbox games on your Windows PC, as long as you…",
-      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/XBOX_PCBackCompat.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,93.955555555556",
-      "enlace": "https://www.theverge.com/games/1032321/microsoft-xbox-original-games-pc-backwards-compatibility",
+      "fechaISO": "2026-11-13T00:46:07.000Z",
+      "titulo": "Donald Trump really wants Tim Cook to run Nvidia",
+      "texto": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy. Right now, the company is being led by its CFO on an interim basis. But President Donald Trump…",
+      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/gettyimages-2228842017.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "enlace": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
+      "fuente": "The Verge",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-13T00:30:00.000Z",
+      "titulo": "Ukrainian drone strikes hit Russian data centers across six regions — forcing companies into Kazakhstan as Putin orders emergency capacity seizure",
+      "texto": "Russian businesses are exploring overseas data centers as Ukrainian drone strikes, limited domestic cloud capacity, and new government requirements complicate infrastructure planning.",
+      "imagen": "https://cdn.mos.cms.futurecdn.net/pjysvtTcT6ffUC32W7xqt6-1920-80.jpg",
+      "enlace": "https://www.techradar.com/pro/ukrainian-drone-strikes-hit-russian-data-centers-across-six-regions-forcing-companies-into-kazakhstan-as-putin-orders-emergency-capacity-seizure",
+      "fuente": "TechRadar",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Otros",
+      "fechaISO": "2026-11-12T23:30:52.000Z",
+      "titulo": "Humble Bundle redesign removes two-factor verification from settings",
+      "texto": "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku. PC…",
+      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Screenshot-2026-11-12-at-3.28.10-PM.png?quality=90&#038;strip=all&#038;crop=0,0,100,88.092261904762",
+      "enlace": "https://www.theverge.com/games/1032659/humble-bundle-redesign-two-factor-verification-security-settings",
       "fuente": "The Verge",
       "traducido": false
     },
@@ -59,26 +79,6 @@
       "imagen": "https://www.engadget.com/img/gallery/who-is-collette-kress-nvidias-interim-ceo/l-intro-1794511529.jpg",
       "enlace": "https://www.engadget.com/2315274/who-is-collette-kress-nvidia-ceo/",
       "fuente": "Engadget",
-      "traducido": false
-    },
-    {
-      "etiqueta": "Otros",
-      "fechaISO": "2026-11-12T19:23:31.000Z",
-      "titulo": "Jensen Huang dimite como CEO de NVIDIA: Colette Kress asume el cargo de forma interina",
-      "texto": "Jensen Huang ha dimitido como presidente, consejero delegado y miembro del consejo de administración de NVIDIA, con efecto inmediato. Así lo ha anunciado el consejo de la compañía en un comunicado oficial, en el que…",
-      "imagen": "https://www.muycomputer.com/2026/11/12/jensen-huang-dimite-como-ceo-de-nvidia-colette-kress-asume-el-cargo-de-forma-interina/",
-      "enlace": "https://www.muycomputer.com/2026/11/12/jensen-huang-dimite-como-ceo-de-nvidia-colette-kress-asume-el-cargo-de-forma-interina/",
-      "fuente": "MuyComputer",
-      "traducido": false
-    },
-    {
-      "etiqueta": "Otros",
-      "fechaISO": "2026-11-12T18:43:22.000Z",
-      "titulo": "CORSAIR HX1000i SHIFT CRYSTAL: una fuente que deja ver mucho más que su interior",
-      "texto": "CORSAIR HX1000i SHIFT CRYSTAL demuestra que incluso un componente tan discreto como la fuente de alimentación puede convertirse en uno de los grandes protagonistas de nuestro PC. Tradicionalmente, estos dispositivos han…",
-      "imagen": "https://www.muycomputer.com/wp-content/uploads/2026/11/CORSAIR-2-1.jpg",
-      "enlace": "https://www.muycomputer.com/2026/11/12/corsair-hx1000i-shift-crystal-una-fuente-que-deja-ver-mucho-mas-que-su-interior/",
-      "fuente": "MuyComputer",
       "traducido": false
     }
   ],
