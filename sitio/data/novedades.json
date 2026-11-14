@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T23:50:32.776Z",
+  "actualizado": "2026-11-14T18:43:43.270Z",
   "items": [
     {
       "etiqueta": "Intel",
@@ -29,12 +29,24 @@
       "etiqueta": "Apple",
       "marca": "Apple",
       "peso": 4,
-      "fechaISO": "2026-11-13T16:55:57.000Z",
-      "titulo": "The new Apple TV has a YouTube problem",
-      "texto": "People who received the brand new Apple TV 4k today saw some strange error messages as soon as they opened the YouTube app. As the first units arrived, the app was initially only showing a black screen with a QR code…",
-      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/268864_Smart_home_photos_HMCRAE37.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-      "enlace": "https://www.theverge.com/tech/1033076/apple-tv-4k-youtube-error",
-      "fuente": "The Verge",
+      "fechaISO": "2026-11-14T16:30:00.000Z",
+      "titulo": "Here's how much Apple AirPods cost in 2016 vs. 2026",
+      "texto": "First introduced in 2016, AirPods have improved in quality, offering a bevy of new features, but how has that impacted the cost to the consumer today?",
+      "imagen": "https://www.engadget.com/img/gallery/heres-how-much-apple-airpods-cost-in-2016-vs-2026/l-intro-1794268432.jpg",
+      "enlace": "https://www.engadget.com/2311715/apple-airpods-2016-vs-2026-how-much-they-cost/",
+      "fuente": "Engadget",
+      "traducido": false
+    },
+    {
+      "etiqueta": "Apple",
+      "marca": "Apple",
+      "peso": 4,
+      "fechaISO": "2026-11-14T14:00:00.000Z",
+      "titulo": "How to use the new remote finding features on the Apple TV 4K (4th gen)",
+      "texto": "The new Apple TV 4K has a smarter way to hunt down a missing remote. Find out how the feature works and what you need on your end to make it happen.",
+      "imagen": "https://www.engadget.com/img/gallery/how-to-use-the-new-remote-finding-features-on-the-apple-tv-4k-4th-gen/l-intro-1794594920.jpg",
+      "enlace": "https://www.engadget.com/2316344/how-to-use-apple-tv-4k-remote-finding-feature/",
+      "fuente": "Engadget",
       "traducido": false
     },
     {
@@ -47,18 +59,6 @@
       "imagen": "https://www.muycomputer.com/wp-content/uploads/2026/11/consumo-memoria-Windows-11.jpg",
       "enlace": "https://www.muycomputer.com/2026/11/13/windows-12-y-la-crisis-de-la-ram-asi-afectara-al-nuevo-sistema-operativo-de-microsoft/",
       "fuente": "MuyComputer",
-      "traducido": false
-    },
-    {
-      "etiqueta": "Microsoft",
-      "marca": "Microsoft",
-      "peso": 4,
-      "fechaISO": "2026-11-13T13:00:00.000Z",
-      "titulo": "Surface Laptop Ultra review: The most powerful Surface yet, but it still lags behind Apple",
-      "texto": "Microsoft's latest Surface is a beautiful flagship device for NVIDIA's RTX Spark.",
-      "imagen": "https://www.engadget.com/img/gallery/surface-laptop-ultra-review-the-most-powerful-surface-yet-but-it-still-lags-behind-apple/l-intro-1794499551.jpg",
-      "enlace": "https://www.engadget.com/2314873/surface-laptop-ultra-review/",
-      "fuente": "Engadget",
       "traducido": false
     },
     {
@@ -86,15 +86,15 @@
       "traducido": false
     },
     {
-      "etiqueta": "Microsoft",
-      "marca": "Microsoft",
+      "etiqueta": "Samsung",
+      "marca": "Samsung",
       "peso": 2,
-      "fechaISO": "2026-11-13T19:14:38.000Z",
-      "titulo": "Here’s how you can save on your GTA VI preorder ahead of launch",
-      "texto": "The long-awaited launch of GTA VI is around the corner, happening next Friday, November 19th. While discounts on the game itself will be rare for some time, there’s a clever workaround to save you a few bucks on your…",
-      "imagen": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/Screenshot-2026-08-27-at-4.13.31-PM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-      "enlace": "https://www.theverge.com/gadgets/1033046/playstation-xbox-gift-card-gta-vi-6-preorder-deal-sale",
-      "fuente": "The Verge",
+      "fechaISO": "2026-11-14T16:32:48.000Z",
+      "titulo": "Samsung's 1TB 990 SSD drops to 19 cents per GB amid the memory crisis — grab it for $40 off",
+      "texto": "Whether you're building a new PC, expanding your gaming library, or replacing an older SATA drive, Samsung's 990 offers a straightforward way to add high-speed PCIe 4.0 storage to your system.",
+      "imagen": "https://cdn.mos.cms.futurecdn.net/z9Tr9cwLtbapB8rpe8ZWCk-1920-80.jpg",
+      "enlace": "https://www.tomshardware.com/pc-components/samsungs-1tb-990-ssd-drops-to-19-cents-per-gb-amid-the-memory-crisis-grab-it-for-usd40-off",
+      "fuente": "Tom's Hardware",
       "traducido": false
     }
   ],
