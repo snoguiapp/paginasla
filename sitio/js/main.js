@@ -182,31 +182,23 @@ $$('.logos img').forEach(img => onBroken(img, () => {
 }));
 $$('.city-photo img, .media img').forEach(img => onBroken(img, () => img.remove()));
 
-/* ===== Panel Novedades en IT =====
-   Lee data/novedades.json (lo actualiza la tarea automática de GitHub).
-   Si no existe o falla, usa la lista manual de js/novedades.js. */
-(async function () {
-  const box = $('#news'); if (!box) return;
-  let data = window.NOVEDADES || [], auto = false;
-  try {
-    const r = await fetch('data/novedades.json', { cache: 'no-cache' });
-    if (r.ok) {
-      const j = await r.json();
-      if (Array.isArray(j.items) && j.items.length) { data = j.items; auto = true; }
-    }
-  } catch (e) { /* sin JSON: se queda la lista manual */ }
-  if (!data.length) return;
-
+/* ===== Panel "Nuevos productos de nuestras marcas" =====
+   Los productos se editan en js/novedades.js (nombre, características, imagen y enlace oficial). */
+(function () {
+  const box = $('#news'), data = window.NOVEDADES;
+  if (!box || !data || !data.length) return;
   const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const seguro = u => (/^(https?:\/\/|img\/)/.test(u || '') ? u : '');
-  const fecha = d => d.fecha || (d.fechaISO ? new Date(d.fechaISO).toLocaleDateString('es-MX', { day: 'numeric', month: 'long', year: 'numeric' }) : '');
+  const dominio = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+  const detalle = d => (Array.isArray(d.caracteristicas) && d.caracteristicas.length)
+    ? '<ul class="news-feats">' + d.caracteristicas.map(f => `<li>${esc(f)}</li>`).join('') + '</ul>'
+    : (d.texto ? `<p class="news-p">${esc(d.texto)}</p>` : '');
   const track = $('.news-track', box), dots = $('.news-dots', box), n = data.length;
   track.innerHTML = data.map((d, i) => `<article class="news-slide" role="group" aria-roledescription="diapositiva" aria-label="${i + 1} de ${n}">
-    <div class="news-media"><img src="${esc(seguro(d.imagen))}" alt="" referrerpolicy="no-referrer" ${i ? 'loading="lazy"' : ''}><span class="news-tag">${esc(d.etiqueta)}</span></div>
-    <div class="news-body"><span class="news-date">${esc(fecha(d))}${d.fuente ? ' · ' + esc(d.fuente) : ''}</span><h3 class="news-h">${esc(d.titulo)}</h3>
-    <p class="news-p">${esc(d.texto)}</p><a class="news-link" href="${esc(seguro(d.enlace))}" target="_blank" rel="noopener noreferrer">${d.fuente ? 'Leer en ' + esc(d.fuente) : 'Ver fuente'}</a></div></article>`).join('');
-  dots.innerHTML = data.map((d, i) => `<button type="button" class="news-dot" data-i="${i}" aria-label="Ir a la novedad ${i + 1}"></button>`).join('');
-  if (auto) dots.insertAdjacentHTML('afterend', '<p class="news-note">' + (data.some(d => d.traducido) ? 'Resúmenes traducidos automáticamente. ' : '') + 'Noticias e imágenes pertenecen a sus fuentes.</p>');
+    <div class="news-media"><img src="${esc(seguro(d.imagen))}" alt="" ${i ? 'loading="lazy"' : ''}><span class="news-tag">${esc(d.marca || d.etiqueta)}</span></div>
+    <div class="news-body"><h3 class="news-h">${esc(d.nombre || d.titulo)}</h3>${detalle(d)}
+    ${seguro(d.enlace) ? `<a class="news-link" href="${esc(seguro(d.enlace))}" target="_blank" rel="noopener noreferrer">Ver en ${esc(dominio(d.enlace) || 'el sitio oficial')}</a>` : ''}</div></article>`).join('');
+  dots.innerHTML = data.map((d, i) => `<button type="button" class="news-dot" data-i="${i}" aria-label="Ir al producto ${i + 1}"></button>`).join('');
   $$('.news-media img', box).forEach(img => onBroken(img, () => img.remove()));
   box.hidden = false;
 
@@ -216,7 +208,7 @@ $$('.city-photo img, .media img').forEach(img => onBroken(img, () => img.remove(
     idx = (i + n) % n; mark();
     track.scrollTo({ left: idx * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
   };
-  const play = () => { if (!reduce && !timer) timer = setInterval(() => go(idx + 1), 7000); };
+  const play = () => { if (!reduce && !timer && n > 1) timer = setInterval(() => go(idx + 1), 7000); };
   const pause = () => { clearInterval(timer); timer = 0; };
 
   track.addEventListener('scroll', () => {
