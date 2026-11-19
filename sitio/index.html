@@ -38,6 +38,7 @@
         </div>
       </div>
       <a href="financiamiento.html">Financiamiento</a>
+      <a href="nosotros.html">Nosotros</a>
       <a href="contacto.html">Contacto</a>
       <a class="btn btn-small" href="contacto.html">Pedir cotización</a>
       <a class="menu-login" href="https://app.sladevelop.com/SlaMexicoVentas/Account/Login" target="_blank" rel="noopener noreferrer">Iniciar sesión</a>
@@ -114,11 +115,11 @@
         <h3 class="panel-title">Productos y tecnologías</h3>
         <p class="sub-lead">Tecnologías de canal cerrado y las principales marcas del mercado.</p>
         <div class="chips" role="group" aria-label="Filtrar por categoría">
-        <button type="button" class="chip" data-filter="infra" aria-pressed="true"><i class="dot c-infra"></i>Infraestructura</button>
-        <button type="button" class="chip" data-filter="seg" aria-pressed="false"><i class="dot c-seg"></i>Seguridad y licencias</button>
-        <button type="button" class="chip" data-filter="imp" aria-pressed="false"><i class="dot c-imp"></i>Impresión</button>
-        <button type="button" class="chip" data-filter="ref" aria-pressed="false"><i class="dot c-ref"></i>Refacciones y garantías</button>
-        <button type="button" class="chip" data-filter="hog" aria-pressed="false"><i class="dot c-hog"></i>Hogar y oficina</button>
+        <button type="button" class="chip" data-filter="infra" data-marcas="dell,hp,lenovo,cisco,intel" aria-pressed="true"><i class="dot c-infra"></i>Infraestructura</button>
+        <button type="button" class="chip" data-filter="seg" data-marcas="fortinet,mcafee,cisco,microsoft,dell" aria-pressed="false"><i class="dot c-seg"></i>Seguridad y licencias</button>
+        <button type="button" class="chip" data-filter="imp" data-marcas="epson,brother,hp,samsung" aria-pressed="false"><i class="dot c-imp"></i>Impresión</button>
+        <button type="button" class="chip" data-filter="ref" data-marcas="dell,hp,lenovo,acer,asus" aria-pressed="false"><i class="dot c-ref"></i>Refacciones y garantías</button>
+        <button type="button" class="chip" data-filter="hog" data-marcas="samsung,apple,asus,acer,ghia" aria-pressed="false"><i class="dot c-hog"></i>Hogar y oficina</button>
         </div>
       <ul class="cards catalog">
         <li class="card" data-cat="infra"><div class="media"><img src="img/productos/computo.webp" alt="" loading="lazy"></div><span class="card-name">Cómputo</span></li>
@@ -142,25 +143,18 @@
         <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/equipos-electrodomesticos.webp" alt="" loading="lazy"></div><span class="card-name">Equipos electrodomésticos</span></li>
         <li class="card" data-cat="hog" hidden><div class="media"><img src="img/productos/productos-de-papeleria.webp" alt="" loading="lazy"></div><span class="card-name">Productos de papelería</span></li>
       </ul>
-        <div class="block">
-          <h4 class="block-title">Las principales marcas tecnológicas</h4>
-      <ul class="logos logos-brands">
-        <li><img src="img/marcas/microsoft.png" alt="Microsoft" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/apple.png" alt="Apple" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/dell.png" alt="Dell" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/cisco.png" alt="Cisco" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/lenovo.png" alt="Lenovo" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/epson.png" alt="Epson" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/acer.png" alt="Acer" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/hp.png" alt="HP" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/ghia.png" alt="GHIA" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/brother.png" alt="Brother" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/samsung.png" alt="Samsung" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/fortinet.png" alt="Fortinet" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/intel.png" alt="Intel" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/mcafee.png" alt="McAfee" height="30" loading="lazy"></li>
-        <li><img src="img/marcas/asus.png" alt="Asus" height="30" loading="lazy"></li>
-      </ul>
+        <div class="block brands-block">
+          <div class="brands-head">
+            <h4 class="block-title">Las principales marcas tecnológicas</h4>
+            <p class="brands-for" id="marcas-for"><i class="dot c-infra"></i><span>Infraestructura</span></p>
+          </div>
+          <ul class="logos logos-brands" id="marcas-cat" aria-live="polite">
+            <li style="--i:0"><img src="img/marcas/dell.png" alt="Dell" height="40" loading="lazy"></li>
+            <li style="--i:1"><img src="img/marcas/hp.png" alt="HP" height="40" loading="lazy"></li>
+            <li style="--i:2"><img src="img/marcas/lenovo.png" alt="Lenovo" height="40" loading="lazy"></li>
+            <li style="--i:3"><img src="img/marcas/cisco.png" alt="Cisco" height="40" loading="lazy"></li>
+            <li style="--i:4"><img src="img/marcas/intel.png" alt="Intel" height="40" loading="lazy"></li>
+          </ul>
         </div>
       </div>
 
@@ -383,6 +377,7 @@
       <a href="#mro">MRO</a>
       <a href="#soporte">Soporte</a>
       <a href="financiamiento.html">Financiamiento</a>
+      <a href="nosotros.html">Nosotros</a>
     </nav>
     <div class="footer-links">
       <a href="https://www.dell.com/support/home/" target="_blank" rel="noopener">Centro de garantía Dell</a>
