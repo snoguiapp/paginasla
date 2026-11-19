@@ -53,10 +53,27 @@ panels.forEach(p => {
 });
 if (panels.length) { addEventListener('hashchange', () => route(true)); route(!!location.hash); }
 
+/* ===== Marcas según la categoría elegida (data-marcas de cada botón en index.html) ===== */
+const NOMBRES_MARCA = { microsoft: 'Microsoft', apple: 'Apple', dell: 'Dell', cisco: 'Cisco', lenovo: 'Lenovo', epson: 'Epson',
+  acer: 'Acer', hp: 'HP', ghia: 'GHIA', brother: 'Brother', samsung: 'Samsung', fortinet: 'Fortinet', intel: 'Intel',
+  mcafee: 'McAfee', asus: 'Asus' };
+const listaMarcas = $('#marcas-cat'), etiquetaMarcas = $('#marcas-for');
+function mostrarMarcas(chip) {
+  if (!listaMarcas) return;
+  const slugs = (chip.dataset.marcas || '').split(',').map(s => s.trim()).filter(Boolean);
+  listaMarcas.innerHTML = slugs.map((s, i) => `<li style="--i:${i}"><img src="img/marcas/${s}.png" alt="${NOMBRES_MARCA[s] || s}" height="40"></li>`).join('');
+  $$('img', listaMarcas).forEach(logoFallback);
+  if (etiquetaMarcas) {
+    $('span', etiquetaMarcas).textContent = chip.textContent.trim();
+    $('i', etiquetaMarcas).className = $('.dot', chip).className;
+  }
+}
+
 /* ===== Filtro del catálogo (empieza en Infraestructura) ===== */
 $$('.chip').forEach(chip => chip.addEventListener('click', () => {
   $$('.chip').forEach(c => c.setAttribute('aria-pressed', c === chip));
   const f = chip.dataset.filter;
+  mostrarMarcas(chip);
   $$('.catalog li').forEach(li => {
     li.hidden = li.dataset.cat !== f;
     if (!li.hidden) { li.style.animation = 'none'; li.offsetHeight; li.style.animation = ''; }
@@ -176,11 +193,14 @@ if (ticks) for (let i = 0; i < 24; i++) {
 function onBroken(img, fn) {
   if (img.complete && !img.naturalWidth) fn(); else img.addEventListener('error', fn, { once: true });
 }
-$$('.logos img').forEach(img => onBroken(img, () => {
-  const s = document.createElement('span');
-  s.className = 'logo-fallback'; s.textContent = img.alt; img.replaceWith(s);
-}));
-$$('.city-photo img, .media img').forEach(img => onBroken(img, () => img.remove()));
+function logoFallback(img) {
+  onBroken(img, () => {
+    const s = document.createElement('span');
+    s.className = 'logo-fallback'; s.textContent = img.alt; img.replaceWith(s);
+  });
+}
+$$('.logos img').forEach(logoFallback);
+$$('.city-photo img, .media img, .page-hero-img').forEach(img => onBroken(img, () => img.remove()));
 
 /* ===== Panel "Nuevos productos de nuestras marcas" =====
    Los productos se editan en js/novedades.js (nombre, características, imagen y enlace oficial). */
