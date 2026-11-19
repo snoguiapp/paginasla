@@ -1,6 +1,6 @@
 /* ===== Marca ===== */
 :root{
-  --navy:#1b3a6b; --night:#0b1830; --green:#6f9a3a; --orange:#f39200;
+  --navy:#1b3a6b; --night:#0b1830; --green:#6f9a3a; --green-dark:#4a7218; --orange:#f39200;
   --ink:#1c1f24; --muted:#5a626d; --paper:#f3f4f6; --line:#dde1e6;
   --font-title:"Oswald","Arial Narrow",sans-serif;
   --font-body:"Open Sans",system-ui,sans-serif;
@@ -47,6 +47,8 @@ h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.8rem}
 .sub{padding-left:1rem}
 .sub a{font-family:var(--font-body);font-size:1.05rem;display:block;padding:.45rem 0;color:var(--muted)}
 .menu .btn{margin-top:1rem}
+.menu a.btn{font-family:var(--font-body);font-size:1rem;font-weight:700;padding:.7rem 1.6rem;color:var(--ink);text-decoration:none}
+.menu a.btn:hover{color:var(--ink);background:#fff;text-decoration:none}
 
 /* ===== Hero ===== */
 .hero{position:relative;overflow:hidden;color:#fff;min-height:calc(100svh - var(--hh) - 64px);display:flex;align-items:center;
@@ -179,7 +181,7 @@ strong.accent{font-weight:400}
 .logos img{width:auto;max-width:100%;object-fit:contain}
 .logos-main{grid-template-columns:repeat(2,1fr)} .logos-main img{height:56px}
 .logos-brands,.logos-mro,.logos-cert{grid-template-columns:repeat(3,1fr)}
-.logos-brands img{height:28px} .logos-mro img{height:36px} .logos-cert img{height:56px}
+.logos-brands img{height:34px} .logos-mro img{height:36px} .logos-cert img{height:56px}
 .logos-clients{grid-template-columns:repeat(3,1fr)} .logos-clients img{height:34px}
 .logo-fallback{font-weight:600;color:var(--muted);text-align:center;font-size:.85rem}
 
@@ -271,6 +273,38 @@ strong.accent{font-weight:400}
 .menu a[aria-current="page"]{color:var(--navy);text-decoration:underline;text-underline-offset:6px}
 .menu .menu-login{font-family:var(--font-body);font-size:1rem;color:var(--muted);margin-top:.5rem}
 
+/* Marcas según la categoría */
+.brands-head{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.2rem;margin-bottom:1.4rem}
+.brands-head .block-title{margin:0}
+.brands-for{display:inline-flex;align-items:center;gap:.5rem;margin:0;padding:.25rem .85rem;border:1px solid var(--line);border-radius:999px;
+  font-size:.9rem;font-weight:600;color:var(--muted)}
+.logos-brands li{animation:logoIn .45s ease both;animation-delay:calc(var(--i,0) * 70ms)}
+@keyframes logoIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Nosotros */
+.page-hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem;align-items:end}
+.page-hero:has(.page-hero-img){padding-bottom:0}
+.page-hero-img{display:block;width:auto;max-width:100%;max-height:260px;margin:0 auto;object-fit:contain}
+.about h2{color:var(--navy)}
+.about p{max-width:68ch;margin:0 0 1.4rem;font-size:1.15rem;line-height:1.65}
+.pdf-btn{display:inline-flex;align-items:center;gap:1rem;margin-top:1rem;padding:1rem 1.5rem 1rem 1rem;background:#fff;color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;text-decoration:none;transition:transform .2s,box-shadow .2s,border-color .2s}
+.pdf-btn:hover{transform:translateY(-3px);border-color:var(--navy);box-shadow:0 10px 24px rgba(11,24,48,.14)}
+.pdf-ico{width:56px;height:56px;flex:none;color:var(--ink)}
+.pdf-name{display:block;font-family:var(--font-title);font-size:1.6rem;line-height:1.1;color:var(--navy)}
+.pdf-sub{display:block;font-size:.85rem;color:var(--muted)}
+.seg-title{color:var(--green-dark)}
+.segments-list{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:2rem 1rem}
+.segments-list li{display:flex;flex-direction:column;align-items:center;gap:.7rem;text-align:center}
+.seg-ico{width:56px;height:56px;color:var(--navy)}
+.seg-name{font-family:var(--font-title);font-weight:300;font-size:1.4rem;line-height:1.15;color:var(--muted)}
+@media (min-width:600px){.segments-list{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){
+  .segments-list{grid-template-columns:repeat(6,1fr)}
+  .page-hero-grid{grid-template-columns:1fr minmax(0,.9fr)}
+  .page-hero-img{max-height:340px;justify-self:end;margin:0}
+}
+
 /* Pie */
 .site-footer{padding:2.5rem 0 1.5rem;font-size:.95rem}
 .footer-grid{display:grid;grid-template-columns:1fr;gap:1.8rem;padding-bottom:1.5rem}
@@ -295,10 +329,11 @@ strong.accent{font-weight:400}
   .fin-card .media{aspect-ratio:1/1}
   .logos-fin{grid-template-columns:repeat(3,1fr)}
   .logos-main{grid-template-columns:repeat(4,1fr)}
-  .logos-brands,.logos-clients{grid-template-columns:repeat(5,1fr)}
+  .logos-clients{grid-template-columns:repeat(5,1fr)}
+  .logos-brands{grid-template-columns:repeat(5,minmax(0,170px));justify-content:start;gap:1.4rem 2rem}
   .logos-mro{grid-template-columns:repeat(4,1fr)}
   .logos-cert{grid-template-columns:repeat(3,1fr)}
-  .logos-clients img{height:42px} .logos-brands img{height:32px}
+  .logos-clients img{height:42px} .logos-brands img{height:40px}
   .practices{grid-template-columns:1fr 1fr}
   #logistica .cities{grid-template-columns:repeat(4,1fr);gap:2rem 1.2rem}
   #logistica .city-photo{width:min(145px,100%)}
@@ -341,7 +376,6 @@ strong.accent{font-weight:400}
   .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:4rem;padding:4rem 0}
 
   .hub{grid-template-columns:repeat(6,1fr)}
-  .logos-brands{grid-template-columns:repeat(8,1fr)}
   .logos-clients{grid-template-columns:repeat(5,1fr)}
   #logistica .cities{grid-template-columns:repeat(4,1fr);gap:2.4rem 1.5rem}
   #logistica .city-photo{width:min(175px,100%)}
@@ -349,6 +383,6 @@ strong.accent{font-weight:400}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .hero .line span,.card,.media,.media img,.clock line,.news-media{animation:none!important}
+  .hero .line span,.card,.media,.media img,.clock line,.news-media,.logos-brands li{animation:none!important}
   *{transition:none!important}
 }
