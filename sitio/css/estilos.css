@@ -342,7 +342,9 @@ strong.accent{font-weight:400}
   .logos-brands{display:flex;flex-wrap:wrap;justify-content:center;gap:1.6rem 3rem}
   .logos-brands li{flex:0 0 150px}
   .logos-mro{grid-template-columns:repeat(4,1fr)}
-  .logos-cert{grid-template-columns:repeat(3,1fr)}
+  .logos-cert{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 4rem}
+  .logos-cert li{flex:0 0 220px}
+  .logos-cert img{height:84px}
   .logos-clients img{height:42px} .logos-brands img{height:40px}
   .practices{grid-template-columns:1fr 1fr}
   #logistica .cities{grid-template-columns:repeat(4,1fr);gap:2rem 1.2rem}
@@ -380,7 +382,6 @@ strong.accent{font-weight:400}
   .map{position:sticky;top:calc(var(--hh) + 1.5rem)}
   .map iframe{height:520px}
   .footer-grid{grid-template-columns:auto 1fr auto;gap:3rem}
-  .logos-cert{grid-template-columns:repeat(3,minmax(0,220px));justify-content:start}
 }
 @media (min-width:1180px){
   .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:4rem;padding:4rem 0}
