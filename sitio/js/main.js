@@ -56,7 +56,8 @@ if (panels.length) { addEventListener('hashchange', () => route(true)); route(!!
 /* ===== Marcas según la categoría elegida (data-marcas de cada botón en index.html) ===== */
 const NOMBRES_MARCA = { microsoft: 'Microsoft', apple: 'Apple', dell: 'Dell', cisco: 'Cisco', lenovo: 'Lenovo', epson: 'Epson',
   acer: 'Acer', hp: 'HP', ghia: 'GHIA', brother: 'Brother', samsung: 'Samsung', fortinet: 'Fortinet', intel: 'Intel',
-  mcafee: 'McAfee', asus: 'Asus' };
+  mcafee: 'McAfee', asus: 'Asus', aspel: 'Aspel', office: 'Microsoft Office', xerox: 'Xerox', kyocera: 'Kyocera',
+  canon: 'Canon', 'hp-latex': 'HP Latex Technologies' };
 const listaMarcas = $('#marcas-cat'), etiquetaMarcas = $('#marcas-for');
 function mostrarMarcas(chip) {
   if (!listaMarcas) return;
