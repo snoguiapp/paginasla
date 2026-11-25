@@ -314,6 +314,16 @@ strong.accent{font-weight:400}
 .site-footer a:hover{text-decoration:underline}
 .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;border-top:1px solid var(--line);padding-top:1rem;color:var(--muted)}
 
+/* Proveedores (página oculta) */
+.prov-list{grid-template-columns:repeat(2,1fr);gap:1.2rem .8rem}
+.prov{display:flex;align-items:center;justify-content:center;width:100%;min-height:96px;padding:.6rem;border-radius:8px;
+  transition:transform .2s,box-shadow .2s}
+a.prov:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,24,48,.12)}
+.prov-list img{width:auto;height:auto;max-width:170px;max-height:64px;object-fit:contain}
+.prov-sep{width:min(640px,100%);margin:2.5rem auto;border:0;border-top:1px solid var(--line)}
+@media (min-width:600px){.prov-list{grid-template-columns:repeat(3,1fr);gap:1.6rem 1rem}}
+@media (min-width:900px){.prov-list{grid-template-columns:repeat(4,1fr)}}
+
 /* Pie compacto: logo, derechos y teléfono en la misma fila */
 .site-footer{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2rem;padding:1.5rem max(1.25rem,calc((100% - var(--wrap)) / 2));
   border-top:1px solid var(--line)}
