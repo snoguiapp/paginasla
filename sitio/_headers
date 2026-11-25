@@ -1,2 +1,11 @@
 /data/*
   Cache-Control: public, max-age=300
+
+/proveedores
+  X-Robots-Tag: noindex, nofollow
+/proveedores.html
+  X-Robots-Tag: noindex, nofollow
+/proovedores
+  X-Robots-Tag: noindex, nofollow
+/proovedores.html
+  X-Robots-Tag: noindex, nofollow
